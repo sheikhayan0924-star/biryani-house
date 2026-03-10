@@ -1,0 +1,68 @@
+🍛 FATHIMA'S BIRYANI HOUSE - HTML WEBSITE
+=====================================
+
+✅ YOUR WEBSITE IS READY TO USE!
+
+📁 FILES:
+---------
+- index.html      (Home page)
+- menu.html       (Menu page)
+- cart.html       (Shopping cart)
+- checkout.html   (Checkout page)
+- style.css       (All styling)
+- products.js     (8 biryani products)
+- cart.js         (Cart management)
+- script.js       (Home page)
+- menu.js         (Menu page)
+- cart-page.js    (Cart page)
+- checkout.js     (WhatsApp integration)
+- README.md       (Full documentation)
+
+🚀 HOW TO OPEN:
+---------------
+1. Double-click "index.html"
+2. Website opens in your browser!
+3. That's it!
+
+📱 SETUP WHATSAPP NUMBER:
+-------------------------
+1. Open "checkout.js" in Notepad
+2. Find line 2:
+   const WHATSAPP_NUMBER = '919876543210';
+3. Replace with YOUR WhatsApp number
+   (country code + number, no spaces)
+   Example: 919876543210 for India
+
+✨ FEATURES:
+-----------
+✅ Beautiful homepage
+✅ Menu with 8 products
+✅ Shopping cart
+✅ WhatsApp orders
+✅ Mobile responsive
+✅ No server needed!
+✅ Works offline!
+
+🎯 PRODUCTS INCLUDED:
+--------------------
+1. Hyderabadi Chicken Biryani - ₹249
+2. Mutton Dum Biryani - ₹349
+3. Veg Biryani - ₹179
+4. Egg Biryani - ₹149
+5. Chicken 65 - ₹249
+6. Paneer Tikka - ₹199
+7. Mango Lassi - ₹79
+8. Gulab Jamun - ₹89
+
+💡 TIPS:
+--------
+- Works on Chrome, Firefox, Edge, Safari
+- Mobile friendly
+- No installation needed
+- Just open index.html!
+
+📞 NEED HELP?
+-------------
+Read README.md for detailed instructions
+
+🎉 ENJOY YOUR WEBSITE!

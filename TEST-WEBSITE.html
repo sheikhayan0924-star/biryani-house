@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Test - Fathima's Biryani House</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        button {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #ff4500;
+        }
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <h1>🍛 Fathima's Biryani House - Website Test</h1>
+        <p>Click the buttons below to test each page:</p>
+        
+        <button onclick="window.location.href='index.html'">Test Home Page</button>
+        <button onclick="window.location.href='menu.html'">Test Menu Page</button>
+        <button onclick="window.location.href='cart.html'">Test Cart Page</button>
+        <button onclick="window.location.href='checkout.html'">Test Checkout Page</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <div class="test-box">
+        <h2>JavaScript Test</h2>
+        <button onclick="testJS()">Test JavaScript</button>
+        <div id="jsTest"></div>
+    </div>
+
+    <div class="test-box">
+        <h2>LocalStorage Test</h2>
+        <button onclick="testStorage()">Test Storage</button>
+        <div id="storageTest"></div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        function testJS() {
+            const div = document.getElementById('jsTest');
+            div.innerHTML = '<p class="success">✅ JavaScript is working!</p>';
+            
+            if (typeof products !== 'undefined') {
+                div.innerHTML += `<p class="success">✅ Products loaded: ${products.length} items found</p>`;
+            } else {
+                div.innerHTML += '<p class="error">❌ Products not loaded</p>';
+            }
+            
+            if (typeof cart !== 'undefined') {
+                div.innerHTML += '<p class="success">✅ Cart system loaded</p>';
+            } else {
+                div.innerHTML += '<p class="error">❌ Cart system not loaded</p>';
+            }
+        }
+
+        function testStorage() {
+            const div = document.getElementById('storageTest');
+            try {
+                localStorage.setItem('test', 'working');
+                const test = localStorage.getItem('test');
+                if (test === 'working') {
+                    div.innerHTML = '<p class="success">✅ LocalStorage is working!</p>';
+                    localStorage.removeItem('test');
+                } else {
+                    div.innerHTML = '<p class="error">❌ LocalStorage not working</p>';
+                }
+            } catch (e) {
+                div.innerHTML = '<p class="error">❌ LocalStorage error: ' + e.message + '</p>';
+            }
+        }
+
+        // Auto test on load
+        window.onload = function() {
+            testJS();
+            testStorage();
+        };
+    </script>
+</body>
+</html>

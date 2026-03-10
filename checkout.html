@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Fathima's Biryani House</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <button class="back-btn" onclick="window.history.back()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <a href="index.html" class="logo">
+                    <h2>Fathima's Biryani House</h2>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Page -->
+    <div class="checkout-page">
+        <div class="container">
+            <h1>Checkout</h1>
+
+            <div class="checkout-grid">
+                <div class="checkout-form card">
+                    <h2>Delivery Information</h2>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="customerName" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Delivery Address *</label>
+                            <textarea id="address" required rows="4" placeholder="Enter complete delivery address"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <select id="paymentMethod">
+                                <option value="Cash on Delivery">Cash on Delivery</option>
+                                <option value="Online Payment">Online Payment</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <div class="order-summary card">
+                    <h2>Order Summary</h2>
+                    
+                    <div class="order-items" id="orderItems">
+                        <!-- Order items will be loaded here -->
+                    </div>
+
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery Fee</span>
+                            <span>₹40</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (5%)</span>
+                            <span id="tax">₹0</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span id="total">₹40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fathima's Biryani House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

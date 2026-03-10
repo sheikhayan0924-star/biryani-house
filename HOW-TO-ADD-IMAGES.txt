@@ -1,0 +1,64 @@
+📸 HOW TO ADD YOUR OWN IMAGES
+==============================
+
+✅ I've created an "images" folder for you!
+
+STEP 1: ADD YOUR IMAGES
+------------------------
+1. Put your biryani photos in the "images" folder
+2. Name them clearly, for example:
+   - chicken-biryani.jpg
+   - mutton-biryani.jpg
+   - veg-biryani.jpg
+   - egg-biryani.jpg
+   - chicken-65.jpg
+   - paneer-tikka.jpg
+   - mango-lassi.jpg
+   - gulab-jamun.jpg
+
+STEP 2: UPDATE products.js
+---------------------------
+1. Open "products.js" in Notepad
+2. Find the product you want to change
+3. Change the image line from:
+   
+   image: 'https://images.unsplash.com/photo-...'
+   
+   To:
+   
+   image: 'images/your-image-name.jpg'
+
+EXAMPLE:
+--------
+Before:
+{
+    id: 1,
+    name: 'Hyderabadi Chicken Biryani',
+    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500',
+    ...
+}
+
+After:
+{
+    id: 1,
+    name: 'Hyderabadi Chicken Biryani',
+    image: 'images/chicken-biryani.jpg',
+    ...
+}
+
+TIPS:
+-----
+✅ Use JPG or PNG format
+✅ Keep image size under 500KB for fast loading
+✅ Use clear, appetizing photos
+✅ Name files without spaces (use - or _)
+
+QUICK EXAMPLE:
+--------------
+1. Save your chicken biryani photo as: chicken-biryani.jpg
+2. Put it in the "images" folder
+3. Open products.js
+4. Change line 8 to: image: 'images/chicken-biryani.jpg',
+5. Save and refresh website!
+
+That's it! Your images will show up! 🍛📸
